@@ -7,9 +7,22 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+/**
+ * 所有Fragment的抽象封装类。
+ * 
+ * @author gao
+ * 
+ */
 public abstract class BaseFragment extends Fragment {
-	private View view;
-	private Context context;
+	public View view;
+	public Context context;
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		context = getActivity();
+	}
 
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
@@ -25,9 +38,18 @@ public abstract class BaseFragment extends Fragment {
 		return view;
 	}
 
-	
+	/**
+	 * 设置界面数据的抽象方法
+	 * 
+	 * @param savedInstanceState
+	 */
 	public abstract void initData(Bundle savedInstanceState);
 
-	
+	/**
+	 * 绘制界面的抽象方法。
+	 * 
+	 * @param inflater
+	 * @return
+	 */
 	public abstract View initView(LayoutInflater inflater);
 }

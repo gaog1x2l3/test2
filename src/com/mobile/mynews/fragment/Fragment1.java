@@ -24,7 +24,7 @@ public class Fragment1 extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		TextView textview = new TextView(getActivity());
-		textview.setText(Fragment1.class.getSimpleName());
+		textview.setText(Fragment1.class.getSimpleName());//通过类加载器，所以不用去修改。复制的时候就可以动态得去修改。
 		return textview;
 	}
 }

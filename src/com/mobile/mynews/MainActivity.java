@@ -16,8 +16,12 @@ public class MainActivity extends SlidingFragmentActivity {
 	private SlidingMenu sm;
 	private MenuFragment2 menuFragment;
 	/**
-	 * 1 得到滑动菜单 2 设置滑动菜单是在左边出来还是右边出来 3 设置滑动菜单出来之后，内容页，显示的剩余宽度 4 设置滑动菜单的阴影
-	 * 设置阴影，阴影需要在开始的时候，特别暗，慢慢的变淡 5 设置阴影的宽度 6 设置滑动菜单的范围
+	 * 1 得到滑动菜单 
+	 * 2 设置滑动菜单是在左边出来还是右边出来
+	 *  3 设置滑动菜单出来之后，内容页，显示的剩余宽度 
+	 *  4 设置滑动菜单的阴影设置阴影，阴影需要在开始的时候，特别暗，慢慢的变淡 
+	 *  5 设置阴影的宽度 
+	 *  6 设置滑动菜单的范围
 	 */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -61,7 +65,7 @@ public class MainActivity extends SlidingFragmentActivity {
 		getSupportFragmentManager().beginTransaction()
 				.replace(R.id.content_frame, homeFragment, "Home").commit();
 		/**
-		 * 下面的代码是右边侧滑
+		 * 下面的代码是右边侧滑，需要将setMode(Slidingmenu.LEFT_RIGHT);设置左右都可以滑动
 		 */
 		// sm.setSecondaryMenu(R.layout.right_menu);
 		// sm.setSecondaryShadowDrawable(R.drawable.shadowright);
@@ -71,18 +75,16 @@ public class MainActivity extends SlidingFragmentActivity {
 	}
 
 	/**
-	 * 方法D 回调
+	 *  回调:暴露出来的方法。供Fragment调用。
 	 */
 	public void switchFragment(Fragment f) {
 		getSupportFragmentManager().beginTransaction()
 				.replace(R.id.content_frame, f).commit();
-		// 自动切换
+		// 自动切换,让切换更自然。
 		sm.toggle();
 	}
 
-	/**
-	 * 获取菜单
-	 */
+	
 	/**
 	 * 获取菜单
 	 */

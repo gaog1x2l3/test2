@@ -6,7 +6,11 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.mobile.mynews.base.BasePage;
-
+/**
+ * 我 页面
+ * @author gao
+ *
+ */
 public class MinePage extends BasePage {
 
 	public MinePage(Context context) {

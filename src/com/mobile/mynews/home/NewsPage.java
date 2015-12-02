@@ -7,12 +7,16 @@ import android.widget.TextView;
 
 import com.mobile.mynews.base.BasePage;
 
+/**
+ * 新闻
+ * 
+ * @author gao
+ * 
+ */
 public class NewsPage extends BasePage {
-	private Context context;
 
 	public NewsPage(Context context) {
 		super(context);
-		this.context = context;
 		// TODO Auto-generated constructor stub
 	}
 

@@ -6,7 +6,11 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.mobile.mynews.base.BasePage;
-
+/**
+ * 视听页
+ * @author gao
+ *
+ */
 public class ListenPage extends BasePage {
 
 	public ListenPage(Context context) {

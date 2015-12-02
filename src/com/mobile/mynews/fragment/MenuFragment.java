@@ -86,11 +86,16 @@ public class MenuFragment extends Fragment implements OnItemClickListener {
 		}
 		switchFragment(f);
 	}
-
+	/**
+	 * 调用MainActivity的switchFragment方法。需要MainActivity暴露一个switchFragment方法。
+	 * Fragment只需回调这个方法即可。
+	 * @param f
+	 */
 	private void switchFragment(Fragment f) {
 		// TODO Auto-generated method stub
 		if (f != null) {
 			if (getActivity() instanceof MainActivity) {
+				//回调Fragment所在的Activity中的switchFragment方法。切换界面。
 				((MainActivity) getActivity()).switchFragment(f);
 			}
 		}

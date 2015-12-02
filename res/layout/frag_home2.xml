@@ -5,10 +5,10 @@
     android:background="@color/white"
     android:orientation="vertical" >
 
-    <ImageView
+    <com.mobile.mynews.view.QfViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
-        android:layout_height="0dip"
+        android:layout_height="0dp"
         android:layout_weight="1.0" />
 
     <RadioGroup

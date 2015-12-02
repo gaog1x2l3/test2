@@ -6,7 +6,11 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.mobile.mynews.base.BasePage;
-
+/**
+ * 发现页
+ * @author gao
+ *
+ */
 public class DiscoverPage extends BasePage {
 
 	public DiscoverPage(Context context) {
