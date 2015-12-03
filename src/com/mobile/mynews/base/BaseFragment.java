@@ -7,6 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
+import com.mobile.mynews.MainActivity;
+
 /**
  * 所有Fragment的抽象封装类。
  * 
@@ -16,12 +19,14 @@ import android.view.ViewGroup;
 public abstract class BaseFragment extends Fragment {
 	public View view;
 	public Context context;
+	public SlidingMenu sm;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		context = getActivity();
+		sm = ((MainActivity) getActivity()).getSlidingMenu();
 	}
 
 	@Override
