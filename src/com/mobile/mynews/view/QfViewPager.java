@@ -1,5 +1,4 @@
 package com.mobile.mynews.view;
-
 /*
  * Copyright (C) 2011 The Android Open Source Project
  *
@@ -70,7 +69,7 @@ public class QfViewPager extends ViewGroup {
     private static final boolean USE_CACHE = false;
 
     private static final int DEFAULT_OFFSCREEN_PAGES = 0;//默认的加载页面,ViewPager是1个,所以会加载两个Fragment
-    private static final int MAX_SETTLE_DURATION = 600; 
+    private static final int MAX_SETTLE_DURATION = 600; // ms
 
     static class ItemInfo {
         Object object;
@@ -211,9 +210,9 @@ public class QfViewPager extends ViewGroup {
     }
 
     /**
-     * Simple implementation of the {@link android.support.v4.view.LazyViewPager.OnPageChangeListener} interface with stub
+     * Simple implementation of the {@link android.support.v4.view.QfViewPager.OnPageChangeListener} interface with stub
      * implementations of each method. Extend this if you do not intend to override
-     * every method of {@link android.support.v4.view.LazyViewPager.OnPageChangeListener}.
+     * every method of {@link android.support.v4.view.QfViewPager.OnPageChangeListener}.
      */
     public static class SimpleOnPageChangeListener implements OnPageChangeListener {
         @Override

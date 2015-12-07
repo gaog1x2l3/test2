@@ -5,32 +5,41 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 
 public class CustomViewPager extends QfViewPager {
-	private boolean isTouchMode = false;
-
-	public CustomViewPager(Context context, AttributeSet attrs) {
-		super(context, attrs);
-		// TODO Auto-generated constructor stub
-	}
+	private boolean isScrollable;
 
 	public CustomViewPager(Context context) {
 		super(context);
-		// TODO Auto-generated constructor stub
 	}
 
-	@Override
-	public boolean onInterceptTouchEvent(MotionEvent ev) {
-		if (isTouchMode)
-			return super.onInterceptTouchEvent(ev);
-		else
-			return false;
+	public CustomViewPager(Context context, AttributeSet attrs) {
+		super(context, attrs);
 	}
 
 	@Override
 	public boolean onTouchEvent(MotionEvent ev) {
-		if (isTouchMode)
-			return super.onTouchEvent(ev);
-		else
+		if (isScrollable == false) {
 			return false;
+		} else {
+			return super.onTouchEvent(ev);
+		}
+
 	}
 
+	@Override
+	public boolean onInterceptTouchEvent(MotionEvent ev) {
+		if (isScrollable == false) {
+			return false;
+		} else {
+			return super.onInterceptTouchEvent(ev);
+		}
+
+	}
+
+	public boolean isScrollable() {
+		return isScrollable;
+	}
+
+	public void setScrollable(boolean isScrollable) {
+		this.isScrollable = isScrollable;
+	}
 }
